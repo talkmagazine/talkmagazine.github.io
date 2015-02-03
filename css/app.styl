@@ -35,9 +35,14 @@ html, body
 	background: $siteBackground
 	color: $primaryColor
 
+canvas
+	display: block
+	z-index: 1
+
 .masthead
 	@extend .dead-center
 	width: 60%
+	z-index:99
 	img
 		width: 100%
 	&:hover
