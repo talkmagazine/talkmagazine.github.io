@@ -1,0 +1,13 @@
+{
+	"name": "talk-magazine",
+	"description": "Launching April 2014",
+	"private": true,
+	"devDependencies": {
+		"grunt-contrib-stylus": "*",
+		"nib": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-watch": "*",
+		"grunt": "*"
+	}
+}
