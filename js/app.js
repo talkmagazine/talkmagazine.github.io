@@ -15,6 +15,7 @@ $(function () {
 			  isDrawing = true;
 			  ctx.lineWidth = 50;
 			  ctx.lineJoin = ctx.lineCap = 'round';
+			  // ctx.strokeStyle = 'rgb(255,255,255)';
 			  ctx.shadowBlur = 10;
 			  ctx.shadowColor = 'rgb(255, 255, 255)';
 			  ctx.moveTo(e.clientX, e.clientY);
