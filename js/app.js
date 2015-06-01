@@ -5,6 +5,7 @@ $(function () {
 		init: function () {
 
 			this._initCountdown();
+			this._initFadeIn();
 			this._initTwitterAPI();
 			this._initInstagramAPI();
 
@@ -27,6 +28,13 @@ $(function () {
 				// find the amount of "seconds" between now and target
 				var current_date = new Date().getTime();
 				var seconds_left = (targetDate - current_date) / 1000;
+				
+				// Pad to 2 digits
+				function pad2(number) {
+
+					return (number < 10 ? '0' : '') + number
+
+				}
 		
 				// do some time calculations
 				days = parseInt(seconds_left / 86400);
@@ -39,10 +47,16 @@ $(function () {
 				seconds = parseInt(seconds_left % 60);
 		
 				// format countdown string + set tag value
-				$countdown.html(days + ' days and ' + hours + ' hours and<br>' + minutes + ' minutes and ' + seconds + ' seconds' );
+				$countdown.html(pad2(days) + ' da<span class="life">y</span>s <span class="life">a</span>nd ' + pad2(hours) + ' hours a<span class="life">n</span>d<br>' + pad2(minutes) + ' <span class="life">m</span>inu<span class="life">t</span>es and ' + pad2(seconds) + ' s<span class="life">e</span>con<span class="life">ds</span>' );
 				
 			}, 0);
 
+		},
+
+		_initFadeIn: function () {
+			$(window).load(function() {
+				$('body').addClass('loaded');
+			});
 		},
 
 		_initTwitterAPI: function () {
