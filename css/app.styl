@@ -6,6 +6,7 @@ global-reset()
 
 $siteBackground = rgb(254,230,211)
 $primaryColor = #fff
+$mobileWidth = "(max-width: 663px) and (min-width: 320px)"
 
 // Mix-ins
 .dead-center
@@ -88,10 +89,16 @@ body
 	// -webkit-text-stroke-color: gray
 	font-size: 96px
 	letter-spacing: -4px
+	@media $mobileWidth
+		font-size: 48px
+		letter-spacing: -2px
 
 .life
 	font-size: 91px
 	font-family: 'Life', Times
+	@media $mobileWidth
+		font-size: 46px
+
 form
 	margin: 40px 0 0 0
 input
