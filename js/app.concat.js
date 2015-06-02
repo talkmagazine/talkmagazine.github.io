@@ -8877,7 +8877,7 @@ $(function () {
 				seconds = parseInt(seconds_left % 60);
 		
 				// format countdown string + set tag value
-				$countdown.html(pad2(days) + ' da<span class="life">y</span>s <span class="life">a</span>nd ' + pad2(hours) + ' hours a<span class="life">n</span>d<br>' + pad2(minutes) + ' <span class="life">m</span>inu<span class="life">t</span>es and ' + pad2(seconds) + ' s<span class="life">e</span>con<span class="life">ds</span>' );
+				$countdown.html('<span class="numbers">'+pad2(days)+'</span> da<span class="life">y</span>s <span class="life">a</span>nd <span class="numbers">' + pad2(hours) + '</span> hours a<span class="life">n</span>d<br><span class="numbers">' + pad2(minutes) + '</span> <span class="life">m</span>inu<span class="life">t</span>es and <span class="numbers">' + pad2(seconds) + '</span> s<span class="life">e</span>con<span class="life">ds</span>' );
 				
 			}, 0);
 
