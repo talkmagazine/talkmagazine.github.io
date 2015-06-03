@@ -4,7 +4,7 @@ global-reset()
 
 // Variables
 
-$siteBackground = rgb(254,230,211)
+$siteBackground = #ececec
 $primaryColor = #fff
 $mobileWidth = "(max-width: 663px) and (min-width: 320px)"
 
@@ -43,6 +43,7 @@ webfont('Life', 'life', true, 'normal')
 // Base
 html
 	margin: 0
+	box-sizing: border-box
 	padding: 0
 body
 	width: 100%
@@ -50,20 +51,28 @@ body
 	padding: 0
 	opacity: 0
 	transition: 1s ease-in
-	background: $siteBackground url('../img/bannerbg.jpg') no-repeat center center fixed
+	background: $siteBackground
 	background-size: cover
 	-webkit-font-smoothing: antialiased
 	font-family: 'Maria Pro', sans-serif
 	color: $primaryColor
+	line-height: 32px
 	&.loaded
 		opacity:1
+a
+	color: #fff
 
 .banner
 	width: 100%
-	position: absolute
+	background-size: cover
 	z-index: 1
-	margin: 10px 0
+	margin: 0
 	text-align: center
+	img
+		max-width: 100%
+.main-banner
+	background: url('../img/talk-1.jpg') no-repeat center center
+	height: 50vh
 
 .masthead
 	width: 40%
@@ -72,10 +81,36 @@ body
 	img
 		max-width: 100%
 
-.presale
+.preorder
 	font-size: 28px
+	width: 100%
+	height: 100%
+	background: rgba(0,0,0,0.2)
 	text-align: center
-	margin-bottom: 20px
+	margin: 0
+	padding: 0
+
+	a
+		text-decoration: none
+		display: inline-block
+		background: #fff
+		color: #000
+		transition: 0.5s ease
+		padding: 20px
+
+		&:hover
+			background: #000
+			color: #fff
+.info
+	width: 50%
+	margin: 0 auto
+	position: relative
+	top: 50%
+	transform: translateY(-50%)
+	ul
+		li
+			display: inline
+
 
 
 .countdown
