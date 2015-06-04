@@ -100,6 +100,8 @@ p
 	text-align: center
 	img
 		max-width: 70%
+		@media $mobileWidth
+			max-width: 100%
 .main-banner
 	background: url('../img/talk-1.jpg') no-repeat center center
 	height: 50vh
@@ -156,12 +158,16 @@ p
 	ul
 		li
 			display: inline
+	@media $mobileWidth
+		width: 90%
 .logo
 	margin: 50px auto
 	width: 26%
 	text-align: center
 	img
 		max-width: 100%
+	@media $mobileWidth
+		width: 100%
 img
 	margin-bottom: 50px
 img.row
