@@ -4,6 +4,7 @@ module.exports = function(grunt) {
             js: {
                 src: [
                     'bower_components/jquery/jquery.js',
+                    'bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js',
                     'js/app.js'
                 ],
                 dest: 'js/app.concat.js'

@@ -5,8 +5,7 @@ $(function () {
 		init: function () {
 
 			this._initFadeIn();
-			this._initTwitterAPI();
-			this._initInstagramAPI();
+			this._initScroll();
 
 		},
 
@@ -16,12 +15,33 @@ $(function () {
 			});
 		},
 
-		_initTwitterAPI: function () {
+		_initScroll: function () {
+			
+			// Divide height of the window by parameter
 
-		},
+			function heightDivide(division) {
+				return parseInt($(window).height() / division);
+			}
 
-		_initInstagramAPI: function(){
+			function scrollBand() {
 
+				var scrollTop = $(document).scrollTop();
+				var height = heightDivide(1)
+				
+				if (scrollTop > height) {
+					$('.scroll-band').addClass('scroll-band-loaded');
+				} else if (scrollTop < height ) {
+					$('.scroll-band').removeClass('scroll-band-loaded');
+				}
+			} 
+			
+			$(window).scroll($.throttle( 150, true, function() {
+				scrollBand();
+			}));
+
+			$(window).resize($.throttle(250, true, function(){
+				scrollBand();
+			}));
 		}
 	};
 
