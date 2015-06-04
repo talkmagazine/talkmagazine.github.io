@@ -62,10 +62,16 @@ body
 	&.loaded
 		opacity:1
 a
-	color: #fff
+	color: #000
+	text-decoration: none
+	transition: 0.2s ease
+	border-bottom: 1px dotted #000
 
 p
 	margin: 20px 0
+
+.anno
+	font-family: "Anno";
 
 .scroll-band
 	width: 100%
@@ -82,6 +88,10 @@ p
 	font-size: $defaultFontSize
 	&.scroll-band-loaded
 		transform: translateY(0) !important
+	a
+		color: #000
+		text-decoration: none
+		border: none
 .banner
 	width: 100%
 	background-size: cover
@@ -128,6 +138,7 @@ p
 	a
 		text-decoration: none
 		display: inline-block
+		border: none
 		background: #fff
 		font-size: $defaultFontSize
 		color: #000
@@ -146,12 +157,15 @@ p
 		li
 			display: inline
 .logo
-	margin: 0 auto
+	margin: 50px auto
 	width: 26%
+	text-align: center
 	img
 		max-width: 100%
 img
 	margin-bottom: 50px
+img.row
+	margin-bottom: 10px
 .countdown
 	width: 90%
 	margin: 0 auto
@@ -173,16 +187,16 @@ img
 	font-family: 'Life', Times
 
 form
-	margin: 40px 0 0 0
+	margin: 40px 0 40px 0
 input
 	display: inline
-	background-color:rgba(0, 0, 0, 0);
-	border: 2px solid #fff
+	background-color:#fff;
 	height: 50px
 	box-sizing: border-box
+	border: none
 	font-family:'Maria Pro'
 	font-size: 14px
-	color: #fff
+	color: #000
 	padding: 0
 
 input[type=email]
@@ -192,18 +206,18 @@ input[type=submit]
 	width: 100px
 
 ::-webkit-input-placeholder {
-   color: #fff;
+   color: #000;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+   color: #000;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+   color: #000;  
 }
 
 :-ms-input-placeholder {  
-   color: #fff;  
+   color: #000;  
 }
 

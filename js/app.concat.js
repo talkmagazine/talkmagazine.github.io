@@ -9110,6 +9110,7 @@ $(function () {
 
 				var scrollTop = $(document).scrollTop();
 				var height = heightDivide(1)
+				currentscrollTop = scrollTop
 				
 				if (scrollTop > height) {
 					$('.scroll-band').addClass('scroll-band-loaded');
