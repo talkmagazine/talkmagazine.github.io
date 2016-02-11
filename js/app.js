@@ -39,6 +39,9 @@ $(function () {
 					$('body').addClass('issue-one-background');
 					$('a').addClass('a-issue1');
 
+				} else {
+					$('body').removeClass('issue-one-background');
+					$('a').removeClass('a-issue1');
 				}
 
 			} 
