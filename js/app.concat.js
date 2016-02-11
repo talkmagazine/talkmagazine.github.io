@@ -9117,6 +9117,13 @@ $(function () {
 				} else if (scrollTop < height ) {
 					$('.scroll-band').removeClass('scroll-band-loaded');
 				}
+
+				if ($('.issue-01-start').offset().top - scrollTop <= 100) {
+					$('body').addClass('issue-one-background');
+					$('a').addClass('a-issue1');
+
+				}
+
 			} 
 			
 			$(window).scroll($.throttle( 150, true, function() {

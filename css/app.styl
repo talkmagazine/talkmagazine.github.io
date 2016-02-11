@@ -53,7 +53,7 @@ body
 	padding: 0
 	font-size: $defaultFontSize
 	opacity: 0
-	transition: 1s ease-in
+	transition: 0.5s ease-in
 	background: $siteBackground
 	background-size: cover
 	-webkit-font-smoothing: antialiased
@@ -62,11 +62,20 @@ body
 	line-height: 32px
 	&.loaded
 		opacity:1
+.issue-one-background
+	background: $issueOneBackground !important
+	color: $issueOneColor !important
+
 a
 	color: $primaryColor
 	text-decoration: none
 	transition: 0.2s ease
 	border-bottom: 1px dotted $primaryColor
+
+	&.a-issue1
+		color: $issueOneColor !important
+		border-bottom: 1px dotted $issueOneColor !important
+
 
 p
 	margin: 20px 0
